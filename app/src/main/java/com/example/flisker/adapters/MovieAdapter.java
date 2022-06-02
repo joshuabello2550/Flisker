@@ -1,6 +1,7 @@
 package com.example.flisker.adapters;
 
 import android.content.Context;
+import android.content.res.Configuration;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -70,7 +71,21 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder> 
         public void bind(Movie movie) {
             tvTitle.setText(movie.getTitle());
             tvOverview.setText(movie.getOverview());
-            Glide.with(context).load(movie.getPosterPath()).into(ivPoster);
+            String imageURL;
+            int placeholder;
+
+            // if phone in landscape
+            if (context.getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE) {
+                imageURL = movie.getBackdropPath();
+                placeholder = R.drawable.flicks_backdrop_placeholder;
+            } else {
+                // if phone is vertical
+                imageURL = movie.getPosterPath();
+                placeholder =  R.drawable.flicks_backdrop_placeholder;
+
+            }
+
+            Glide.with(context).load(imageURL).placeholder(placeholder).into(ivPoster);
         }
     }
 
