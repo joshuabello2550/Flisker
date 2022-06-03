@@ -29,4 +29,5 @@
         android:layout_marginTop="5dp"
         android:layout_toEndOf="@+id/ivPoster"
         tools:text="Testing 1 2 3 " />
+
 </RelativeLayout>
