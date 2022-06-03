@@ -3,12 +3,15 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="4dp"
+    android:paddingEnd="8dp">
 
     <ImageView
         android:id="@+id/ivPoster"
         android:layout_width="120dp"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="0dp"
         tools:srcCompat="@tools:sample/avatars" />
 
     <TextView
@@ -22,12 +25,17 @@
 
     <TextView
         android:id="@+id/tvOverview"
-        android:layout_width="wrap_content"
+        android:layout_width="286dp"
         android:layout_height="wrap_content"
         android:layout_below="@+id/tvTitle"
+        android:layout_alignBottom="@id/ivPoster"
         android:layout_marginStart="5dp"
         android:layout_marginTop="5dp"
         android:layout_toEndOf="@+id/ivPoster"
-        tools:text="Testing 1 2 3 " />
+        android:ellipsize="end"
+        android:maxLines="6"
+        android:scrollHorizontally="true"
+        tools:text="Testing 1 2 3 Testing 1 2 3 Testing 1 2 3 Testing 1 2 3 Testing 1 2 3 Testing 1 2 3 Testing 1 2 3 Testing 1 2 3 Testing 1 2 3 Testing 1 2 3 Testing 1 2 3 Testing 1 2 3 Testing 1 2 3 Testing 1 2 3 Testing 1 2 3 " />
+
 
 </RelativeLayout>

@@ -4,6 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:paddingStart="8dp"
+    android:paddingEnd="8dp"
     tools:context=".MovieDetailsActivity">
 
     <TextView
@@ -27,7 +29,10 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
-        android:text="TextView" />
+        android:layout_marginBottom="16dp"
+        android:paddingStart="0dp"
+        android:paddingEnd="0dp"
+        tools:text="Movie Description" />
 
     <RatingBar
         android:id="@+id/rbVoteAverage"
@@ -45,7 +50,49 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/tvOverview"
-        android:layout_marginTop="1dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="0dp"
         android:text="Back" />
+
+    <Button
+        android:id="@+id/btnYourRatingSubmit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/npYourRating"
+        android:layout_alignParentEnd="false"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="159dp"
+        android:text="Submit" />
+
+    <TextView
+        android:id="@+id/numVoteValue"
+        android:layout_width="58dp"
+        android:text="5.6"
+        android:layout_height="16dp"
+        android:layout_alignTop="@+id/rbVoteAverage"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="0dp"
+        android:layout_toEndOf="@+id/rbVoteAverage"
+        android:ems="10" />
+
+    <TextView
+        android:id="@+id/tvYourRating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnClose"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:text="Your Rating" />
+
+    <NumberPicker
+        android:id="@+id/npYourRating"
+        android:layout_width="40dp"
+        android:layout_height="120dp"
+        android:layout_below="@+id/tvYourRating"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp" />
+
 
 </RelativeLayout>
