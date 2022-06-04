@@ -1,6 +1,6 @@
 # Project 1 - *FLisker*
 
-**Name of your app** shows the latest movies currently playing in theaters. The app utilizes the Movie Database API to display images and basic information about these movies to the user.
+Flisker shows the latest movies currently playing in theaters. The app utilizes the Movie Database API to display images and basic information about these movies to the user.
 
 Time spent: **14** hours spent in total
 
